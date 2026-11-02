@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can Jito · Vermut y tapas caseras en el Eixample</title>
+<meta name="description" content="Can Jito, bar de vermut y tapas caseras en Carrer de València 127, Barcelona. Ensaladilla, tortilla, bikinis y vermut. Para tomar aquí o para llevar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#120d0a; --bg-2:#1a1310; --bg-3:#231a15; --cream:#f2ebda; --cream-2:#ddd2bc; --cream-3:#9a8c74;
+  --accent:#c5301e; --accent-2:#a82516; --gold:#c9a15e; --line:rgba(242,235,218,.12);
+  --disp:'Gloock',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{width:min(1140px,92vw);margin:0 auto}
+.demo{background:var(--accent);color:#fff;font-size:.78rem;text-align:center;padding:.5rem 1rem}
+.demo b{font-weight:700}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(18,13,10,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+.logo{font-family:var(--disp);font-size:1.6rem;text-decoration:none;letter-spacing:.01em}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.6rem;font-size:.9rem;color:var(--cream-2)}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--gold)}
+@media (max-width:760px){.nav-links{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem;border:1px solid transparent;cursor:pointer;font-family:var(--sans);transition:transform .2s,background .2s}
+.btn-red{background:var(--accent);color:#fff}
+.btn-red:hover{background:var(--accent-2);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:5rem 0 6rem;text-align:center;isolation:isolate}
+@property --a{syntax:'<angle>';inherits:false;initial-value:0deg}
+.hero-mesh{position:absolute;inset:-20%;z-index:-2;background:conic-gradient(from var(--a) at 50% 55%,#3a0d07,#120d0a 25%,#5b1a0e 45%,#120d0a 65%,#3d2a12 85%,#3a0d07);filter:blur(70px);opacity:.9;animation:rot 18s linear infinite}
+@keyframes rot{to{--a:360deg}}
+@media (prefers-reduced-motion:reduce){.hero-mesh{animation:none}}
+.hero-grain{position:absolute;inset:0;z-index:-1;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.meta{display:inline-flex;align-items:center;gap:.55rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-2);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;background:rgba(18,13,10,.4)}
+.meta i{width:8px;height:8px;border-radius:50%;background:#777}
+.meta.open i{background:#5bbf6a;box-shadow:0 0 0 4px rgba(91,191,106,.2)}
+.glass{display:block;margin:2.4rem auto 0;width:min(170px,40vw)}
+.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(3.2rem,10vw,7.5rem);line-height:.95;margin-top:1.5rem;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.sub{max-width:40ch;margin:1.4rem auto 0;color:var(--cream-2);font-size:1.08rem}
+.hero-foot{display:flex;flex-direction:column;align-items:center;gap:1.4rem;margin-top:2.4rem}
+.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center}
+.rating{font-size:.9rem;color:var(--cream-3)}
+.rating b{color:var(--gold);font-size:1.05rem}
+
+/* concept */
+section{padding:6rem 0}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.02;margin-top:.8rem}
+h2 em{font-style:italic;color:var(--accent)}
+.lead{color:var(--cream-2);max-width:56ch;margin-top:1.2rem;font-size:1.05rem}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:3rem}
+.pillar{background:var(--bg-2);padding:2rem}
+.pillar .n{font-family:var(--disp);font-size:2.6rem;color:var(--accent);line-height:1}
+.pillar h3{font-size:1.1rem;margin-top:.8rem}
+.pillar p{color:var(--cream-3);font-size:.93rem;margin-top:.4rem}
+@media (max-width:760px){.pillars{grid-template-columns:1fr}}
+
+/* favoritos horizontal */
+.rail{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2.5rem 4vw 1.5rem;margin:0 calc(50% - 50vw);scrollbar-width:thin;scrollbar-color:var(--accent) transparent}
+.dish{flex:0 0 min(320px,78vw);scroll-snap-align:center;background:var(--bg-3);border:1px solid var(--line);border-radius:26px;padding:1.6rem;position:relative;overflow:hidden;transition:transform .35s}
+.dish:hover{transform:translateY(-6px)}
+.dish::after{content:"";position:absolute;inset:0;background:radial-gradient(500px circle at var(--x,50%) var(--y,0%),rgba(197,48,30,.18),transparent 40%);pointer-events:none}
+.dish .art{height:170px;display:grid;place-items:center;margin-bottom:1rem}
+.dish .art svg{height:100%}
+.dish .tag{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.dish h3{font-family:var(--disp);font-weight:400;font-size:1.6rem;line-height:1.1;margin-top:.4rem}
+.dish p{color:var(--cream-3);font-size:.9rem;margin-top:.5rem}
+.dish q{display:block;margin-top:1rem;padding-top:1rem;border-top:1px dashed var(--line);font-size:.85rem;color:var(--cream-2);font-style:italic}
+.hint{font-size:.8rem;color:var(--cream-3);text-align:right}
+
+/* pedido */
+.order{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;margin-top:3rem}
+@media (max-width:860px){.order{grid-template-columns:1fr}}
+.list{display:flex;flex-direction:column;gap:.6rem}
+.row{display:flex;align-items:center;gap:1rem;background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:.9rem 1rem}
+.row .nm{flex:1}
+.row .nm small{display:block;color:var(--cream-3);font-size:.78rem}
+.qty{display:flex;align-items:center;gap:.4rem}
+.qty button{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--bg-3);color:var(--cream);font-size:1rem;cursor:pointer}
+.qty button:hover{border-color:var(--gold)}
+.qty span{width:1.4rem;text-align:center;font-weight:700}
+.ticket{background:var(--cream);color:#1a1310;border-radius:6px;padding:1.6rem 1.4rem 2rem;font-family:'Courier New',monospace;position:relative;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.ticket::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:12px;background:radial-gradient(circle at 8px -2px,transparent 8px,var(--cream) 9px) repeat-x;background-size:16px 12px}
+.ticket h3{text-align:center;font-family:var(--disp);font-weight:400;font-size:1.6rem;letter-spacing:.02em}
+.ticket .sub{text-align:center;font-size:.75rem;margin-bottom:1rem}
+.ticket ul{list-style:none;border-top:1px dashed #1a1310;border-bottom:1px dashed #1a1310;padding:.8rem 0;min-height:90px;font-size:.9rem}
+.ticket li{display:flex;justify-content:space-between}
+.ticket .empty{color:#8a7d68;text-align:center;padding-top:1.4rem}
+.ticket label{display:block;font-size:.8rem;margin-top:1rem}
+.ticket select{width:100%;margin-top:.3rem;padding:.6rem;border:1px solid #1a1310;background:transparent;font-family:inherit;border-radius:4px}
+.ticket .btn{width:100%;margin-top:1rem;font-family:var(--sans)}
+.btn[aria-disabled="true"]{opacity:.35;pointer-events:none}
+.fine{font-size:.78rem;color:var(--cream-3);margin-top:.8rem}
+.ticket .fine{color:#6b5f4c}
+
+/* reseñas */
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:3rem}
+.quote{border:1px solid var(--line);border-radius:22px;padding:2rem;background:linear-gradient(160deg,var(--bg-3),var(--bg-2))}
+.quote q{font-family:var(--disp);font-size:1.45rem;line-height:1.3}
+.quote span{display:block;margin-top:1rem;font-size:.8rem;color:var(--cream-3)}
+.quote.big{grid-column:span 2;text-align:center}
+.quote.big q{font-size:clamp(1.6rem,3.4vw,2.4rem)}
+@media (max-width:760px){.quotes{grid-template-columns:1fr}.quote.big{grid-column:auto}}
+
+/* visita */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+@media (max-width:860px){.visit{grid-template-columns:1fr}}
+.hours{list-style:none;margin-top:1.5rem}
+.hours li{display:flex;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid var(--line)}
+.hours li.today{color:var(--gold);font-weight:700}
+.addr{font-family:var(--disp);font-size:2.2rem;line-height:1.1;margin-top:1rem}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}
+.chip{font-size:.8rem;border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem;color:var(--cream-2)}
+.ph{margin-top:2rem;border-radius:22px;border:1px dashed rgba(242,235,218,.25);aspect-ratio:16/9;display:grid;place-items:center;color:var(--cream-3);font-size:.85rem;background:repeating-linear-gradient(135deg,#1a1310 0 14px,#1f1712 14px 28px);text-align:center;padding:1rem}
+
+footer{border-top:1px solid var(--line);padding:2.5rem 0;font-size:.82rem;color:var(--cream-3)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="demo">Propuesta de web para <b>Can Jito</b> · versión de muestra: fotos, carta y precios los completamos con vosotros</div>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">Can <span>Jito</span></a>
+    <div class="nav-links"><a href="#casa">La casa</a><a href="#favoritos">Favoritos</a><a href="#llevar">Para llevar</a><a href="#visita">Horario</a></div>
+    <a class="btn btn-red" href="#llevar">Pedir</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-mesh"></div><div class="hero-grain"></div>
+  <div class="wrap">
+    <span class="meta" id="meta"><i></i><span>Carrer de València 127 · Eixample</span></span>
+    <svg class="glass" viewBox="0 0 120 150" aria-hidden="true">
+      <defs><linearGradient id="v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d23a24"/><stop offset="1" stop-color="#7a1608"/></linearGradient></defs>
+      <path d="M22 18h76l-8 92c-1 10-9 16-18 16H48c-9 0-17-6-18-16z" fill="rgba(242,235,218,.08)" stroke="rgba(242,235,218,.5)" stroke-width="2"/>
+      <path d="M28 48h64l-5 60c-1 8-7 12-14 12H47c-7 0-13-4-14-12z" fill="url(#v)"/>
+      <rect x="40" y="58" width="16" height="16" rx="3" fill="rgba(255,255,255,.35)" transform="rotate(-12 48 66)"/>
+      <rect x="62" y="70" width="14" height="14" rx="3" fill="rgba(255,255,255,.28)" transform="rotate(14 69 77)"/>
+      <circle cx="74" cy="54" r="9" fill="#e9a23b"/><circle cx="74" cy="54" r="6" fill="#f2c066"/>
+      <path d="M86 6 70 54" stroke="#c9a15e" stroke-width="3" stroke-linecap="round"/><circle cx="83" cy="16" r="6" fill="#4b6b2a"/>
+      <path d="M40 132h40" stroke="rgba(242,235,218,.4)" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <h1>Hora del<br><em>vermut</em>.</h1>
+    <p class="sub">Tapas caseras, bikinis que dan que hablar y un vermut bueno y a buen precio. Aquí o para llevar.</p>
+    <div class="hero-foot">
+      <div class="hero-actions"><a class="btn btn-red" href="#llevar">Pide para llevar</a><a class="btn btn-ghost" href="#favoritos">Ver favoritos</a></div>
+      <div class="rating"><b>5,0 ★</b> en Google · todo hecho en casa</div>
+    </div>
+  </div>
+</header>
+
+<section id="casa">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">La casa</p>
+      <h2>Cocina de casa,<br><em>sin prisas</em>.</h2>
+      <p class="lead">Can Jito es un bar pequeño del Eixample donde todo se hace aquí: la ensaladilla, la tortilla y los bocadillos. Zaira te recibe con una sonrisa y el vermut siempre está frío.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><div class="n">01</div><h3>Todo casero</h3><p>Lo que pruebas se cocina en el bar, cada día.</p></div>
+      <div class="pillar"><div class="n">02</div><h3>Vermut Luna</h3><p>Bueno y a buen precio, como tiene que ser.</p></div>
+      <div class="pillar"><div class="n">03</div><h3>Para llevar</h3><p>Pídelo antes y recógelo sin esperar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="favoritos" style="background:var(--bg-2);padding-bottom:4rem">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Los favoritos</p>
+      <h2>Lo que más <em>se pide</em></h2>
+      <p class="lead">Los platos que más nombran vuestros clientes en Google. La carta completa, con precios, la añadimos con vosotros.</p>
+    </div>
+    <div class="rail" id="rail">
+      <article class="dish">
+        <div class="art"><svg viewBox="0 0 160 120" aria-hidden="true"><rect x="16" y="54" width="128" height="22" rx="10" fill="#e3b46a"/><rect x="22" y="44" width="116" height="12" rx="5" fill="#b33a2a"/><rect x="24" y="38" width="112" height="8" rx="4" fill="#f4e7c3"/><path d="M26 40c10-6 22 4 32-2s20 4 30-2 22 4 30-2 16 2 18 4" stroke="#d8a23c" stroke-width="4" fill="none"/><rect x="16" y="26" width="128" height="14" rx="7" fill="#e7bd77"/><rect x="16" y="76" width="128" height="10" rx="5" fill="#c8954f"/></svg></div>
+        <span class="tag">La firma</span><h3>Bikini de sobrasada, brie y miel</h3><p>Dulce, salado y crujiente a la vez.</p>
+        <q>Recalcar el bikini de sobrasada, brie y miel.</q>
+      </article>
+      <article class="dish">
+        <div class="art"><svg viewBox="0 0 160 120" aria-hidden="true"><ellipse cx="80" cy="92" rx="64" ry="14" fill="#2e2420"/><path d="M24 84c0-30 24-54 56-54s56 24 56 54z" fill="#f0d27a"/><path d="M24 84c0-30 24-54 56-54s56 24 56 54" fill="none" stroke="#c98a2e" stroke-width="6"/><path d="M80 30v54" stroke="#e2bb5a" stroke-width="2"/><path d="M80 84 120 56" stroke="#e2bb5a" stroke-width="2"/></svg></div>
+        <span class="tag">Clásico</span><h3>Tortilla de patatas</h3><p>Jugosa, hecha en casa.</p>
+        <q>La comida súper buena, sobre todo la tortilla.</q>
+      </article>
+      <article class="dish">
+        <div class="art"><svg viewBox="0 0 160 120" aria-hidden="true"><ellipse cx="80" cy="90" rx="62" ry="16" fill="#e8e0d0"/><path d="M34 84c4-26 24-40 46-40s42 14 46 40z" fill="#f2e3b0"/><g fill="#e4572e"><rect x="54" y="52" width="10" height="5" rx="2"/><rect x="88" y="60" width="10" height="5" rx="2"/></g><g fill="#4f7a2a"><circle cx="72" cy="62" r="3"/><circle cx="100" cy="72" r="3"/><circle cx="62" cy="72" r="2.5"/></g><path d="M58 46l8 8M94 44l-6 10" stroke="#c9a15e" stroke-width="3"/></svg></div>
+        <span class="tag">Imprescindible</span><h3>Ensaladilla</h3><p>La de toda la vida, cremosa y casera.</p>
+        <q>Ensaladilla buenísima, el servicio excelente.</q>
+      </article>
+      <article class="dish">
+        <div class="art"><svg viewBox="0 0 160 120" aria-hidden="true"><path d="M56 14h48l-6 82c-1 8-7 12-14 12h-8c-7 0-13-4-14-12z" fill="rgba(242,235,218,.08)" stroke="rgba(242,235,218,.5)" stroke-width="2"/><path d="M59 40h42l-4 54c-1 6-5 9-10 9h-14c-5 0-9-3-10-9z" fill="#b2281a"/><circle cx="90" cy="38" r="8" fill="#e9a23b"/></svg></div>
+        <span class="tag">Para brindar</span><h3>Vermut Luna</h3><p>Con su oliva y su naranja.</p>
+        <q>El vermut Luna muy bueno y barato.</q>
+      </article>
+    </div>
+    <p class="hint">Desliza →</p>
+  </div>
+</section>
+
+<section id="llevar">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Para llevar</p>
+      <h2>Pídelo antes,<br><em>recógelo sin esperar</em>.</h2>
+      <p class="lead">Elige, di a qué hora pasas y el pedido le llega al bar por WhatsApp.</p>
+    </div>
+    <div class="order reveal">
+      <div class="list" id="list"></div>
+      <div>
+        <div class="ticket">
+          <h3>Can Jito</h3>
+          <p class="sub">Pedido para llevar</p>
+          <ul id="items"><li class="empty">Aún no has añadido nada</li></ul>
+          <label for="hora">¿A qué hora pasas?</label>
+          <select id="hora"></select>
+          <a class="btn btn-red" id="send" href="#" aria-disabled="true">Enviar pedido por WhatsApp</a>
+          <p class="fine">O llama al 630 98 09 21.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-2)">
+  <div class="wrap">
+    <p class="eyebrow reveal">Opiniones</p>
+    <h2 class="reveal">5,0 estrellas <em>en Google</em></h2>
+    <div class="quotes">
+      <div class="quote big reveal"><q>Zaira es una chica 10. Venid a visitarlos y os darán una sonrisa y alegría.</q><span>Reseña de Google</span></div>
+      <div class="quote reveal"><q>Muy buena la comida, todo casero.</q><span>Reseña de Google</span></div>
+      <div class="quote reveal"><q>Son muy amables, ¡repetiremos!</q><span>Reseña de Google</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visita">
+  <div class="wrap visit">
+    <div class="reveal">
+      <p class="eyebrow">Ven a vernos</p>
+      <p class="addr">Carrer de València, 127<br><span style="color:var(--gold);font-style:italic">Eixample, Barcelona</span></p>
+      <p style="color:var(--cream-2);margin-top:1rem">Teléfono: <b>630 98 09 21</b></p>
+      <div class="chips"><span class="chip">Comer allí</span><span class="chip">Para llevar</span><span class="chip">Tapas caseras</span><span class="chip">Vermut</span></div>
+      <p style="margin-top:1.4rem"><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Can+Jito+Carrer+de+Valencia+127+Barcelona">Cómo llegar</a></p>
+      <div class="ph">Aquí va una foto de la barra o de la terraza</div>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Horario</p>
+      <ul class="hours" id="hours"></ul>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap foot"><span>© Can Jito · Carrer de València 127, Barcelona</span><span>Web de muestra preparada por Marcos</span></div></footer>
+
+<script>
+(function(){
+  function safe(f){try{f()}catch(e){console.warn(e)}}
+  var HOURS=[null,null,[600,1080],[600,1080],[600,1080],[660,1140],[720,1200]];
+  var DAYS=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  function fmt(m){var h=Math.floor(m/60),mi=m%60;return h+':'+(mi<10?'0':'')+mi}
+  function madrid(){var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});return{d:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday),m:parseInt(o.hour,10)%24*60+parseInt(o.minute,10)}}
+  var now=madrid();
+
+  safe(function(){
+    var els=[].slice.call(document.querySelectorAll('.reveal'));
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.05});
+    els.forEach(function(e){io.observe(e)});setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},2500);
+  });
+
+  safe(function(){
+    var ul=document.getElementById('hours');
+    [1,2,3,4,5,6,0].forEach(function(i){var li=document.createElement('li');if(i===now.d)li.className='today';var h=HOURS[i];li.innerHTML='<span>'+DAYS[i]+'</span><span>'+(h?fmt(h[0])+' – '+fmt(h[1]):'Cerrado')+'</span>';ul.appendChild(li)});
+    var t=HOURS[now.d],open=t&&now.m>=t[0]&&now.m<t[1],msg;
+    if(open)msg='Abierto ahora · hasta las '+fmt(t[1]);
+    else if(t&&now.m<t[0])msg='Hoy abrimos a las '+fmt(t[0]);
+    else{var dd=now.d,k=0;do{dd=(dd+1)%7;k++}while(!HOURS[dd]&&k<7);msg='Cerrado · abrimos '+(k===1?'mañana':'el '+DAYS[dd].toLowerCase())+' a las '+fmt(HOURS[dd][0])}
+    var m=document.getElementById('meta');m.classList.toggle('open',!!open);m.querySelector('span').textContent=msg;
+  });
+
+  // halo que sigue al cursor
+  safe(function(){[].forEach.call(document.querySelectorAll('.dish'),function(d){d.addEventListener('pointermove',function(e){var r=d.getBoundingClientRect();d.style.setProperty('--x',(e.clientX-r.left)+'px');d.style.setProperty('--y',(e.clientY-r.top)+'px')})})});
+
+  // pedido para llevar
+  safe(function(){
+    var P=[
+      {n:'Bikini de sobrasada, brie y miel',d:'La firma de la casa'},
+      {n:'Tortilla de patatas',d:'Ración'},
+      {n:'Ensaladilla',d:'Ración'},
+      {n:'Tapa del día',d:'Pregunta cuál toca hoy'},
+      {n:'Vermut Luna',d:'Botella para llevar (ejemplo)'}
+    ];
+    var q=P.map(function(){return 0}),list=document.getElementById('list'),items=document.getElementById('items'),send=document.getElementById('send'),hora=document.getElementById('hora');
+    P.forEach(function(p,i){var r=document.createElement('div');r.className='row';r.innerHTML='<div class="nm">'+p.n+'<small>'+p.d+'</small></div><div class="qty"><button data-a="-1" aria-label="Quitar">−</button><span>0</span><button data-a="1" aria-label="Añadir">+</button></div>';
+      r.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;q[i]=Math.max(0,Math.min(20,q[i]+(+b.getAttribute('data-a'))));render()});list.appendChild(r)});
+    // horas de recogida: cada 15 min dentro del horario de hoy (o del próximo día abierto)
+    var day=now.d,t=HOURS[day],start,label='Hoy';
+    if(!t||now.m>=t[1]-15){var k=0;do{day=(day+1)%7;k++}while(!HOURS[day]&&k<7);t=HOURS[day];start=t[0];label=k===1?'Mañana':DAYS[day]}
+    else start=Math.max(t[0],Math.ceil((now.m+20)/15)*15);
+    for(var m=start;m<=t[1]-15;m+=15){var o=document.createElement('option');o.textContent=label+' a las '+fmt(m);hora.appendChild(o)}
+    hora.addEventListener('change',render);
+    function render(){
+      [].forEach.call(list.children,function(r,i){r.querySelector('.qty span').textContent=q[i]});
+      var sel=P.map(function(p,i){return q[i]?{n:p.n,q:q[i]}:null}).filter(Boolean);
+      items.innerHTML=sel.length?sel.map(function(s){return '<li><span>'+s.n+'</span><span>×'+s.q+'</span></li>'}).join(''):'<li class="empty">Aún no has añadido nada</li>';
+      send.setAttribute('aria-disabled',!sel.length);
+      if(sel.length){var txt='¡Hola Can Jito! Quiero hacer un pedido para llevar:\n'+sel.map(function(s){return '- '+s.q+' × '+s.n}).join('\n')+'\nPaso a recogerlo: '+hora.value.toLowerCase()+'.';send.href='https://wa.me/34630980921?text='+encodeURIComponent(txt)}else send.href='#';
+    }
+    send.addEventListener('click',function(e){if(send.getAttribute('aria-disabled')==='true')e.preventDefault()});
+    render();
+  });
+})();
+</script>
+</body>
+</html>
