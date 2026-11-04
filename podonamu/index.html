@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Podonamu 포도나무 · Restaurante coreano en el Eixample · Barcelona</title>
+<meta name="description" content="Podonamu, restaurante coreano en Carrer de València 164, Barcelona. Jjamppong, kimchi jjigae, bibimbap, pollo coreano y más. Banchan y arroz incluidos. Reserva tu mesa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Questrial&family=Allura&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#141312; --bg-2:#1c1a18; --bg-3:#252220; --cream:#ebe1d0; --cream-2:#cfc3ae; --mute:#968b78;
+  --olive:#4f5b17; --olive-l:#6b7a24; --tan:#d4a57e; --tag:#ddd2c0; --spicy:#f5a623; --vegan:#6fa33a;
+  --wood:#8a5a32; --line:rgba(235,225,208,.13);
+  --disp:'Italiana',Georgia,serif; --sans:'Questrial','Noto Sans KR',system-ui,sans-serif; --script:'Allura',cursive; --kr:'Noto Sans KR',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.kr{font-family:var(--kr)}
+.demo{background:var(--olive);color:var(--cream);text-align:center;font-size:.78rem;padding:.5rem 1rem}
+.demo b{color:#fff}
+
+nav{position:sticky;top:0;z-index:60;background:rgba(20,19,18,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+.logo{display:flex;flex-direction:column;align-items:center;line-height:1;text-decoration:none}
+.logo b{font-family:var(--sans);font-weight:400;font-size:1.55rem;letter-spacing:.02em}
+.logo span{font-family:var(--kr);font-size:.62rem;letter-spacing:.35em;color:var(--tan);margin-top:.15rem}
+.links{display:flex;gap:1.7rem;font-size:.92rem;color:var(--cream-2)}
+.links a{text-decoration:none}
+.links a:hover{color:var(--tan)}
+@media (max-width:800px){.links{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:2px;font-family:var(--sans);font-size:.92rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid var(--tan);cursor:pointer;transition:background .25s,color .25s,transform .25s}
+.btn-tan{background:var(--tan);color:#1a1512}
+.btn-tan:hover{background:#e3b892;transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--cream);border-color:rgba(235,225,208,.45)}
+.btn-line:hover{border-color:var(--tan);color:var(--tan)}
+.btn[aria-disabled="true"]{opacity:.35;pointer-events:none}
+
+/* hero */
+.hero{position:relative;min-height:min(88vh,820px);display:grid;align-items:center;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;transform:scale(1.04);animation:slow 22s ease-in-out infinite alternate}
+@keyframes slow{to{transform:scale(1.12)}}
+@media (prefers-reduced-motion:reduce){.hero-bg img{animation:none}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,19,18,.94) 0%,rgba(20,19,18,.78) 42%,rgba(20,19,18,.25) 75%,rgba(20,19,18,.55) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 30%)}
+@media (max-width:800px){.hero::before{background:linear-gradient(0deg,rgba(20,19,18,.97) 30%,rgba(20,19,18,.55) 70%,rgba(20,19,18,.35) 100%)}.hero{align-items:end;min-height:92vh}}
+.hero-inner{padding:5rem 0 4rem;max-width:620px}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.82rem;letter-spacing:.06em;border:1px solid var(--line);background:rgba(20,19,18,.55);border-radius:999px;padding:.4rem 1rem}
+.status i{width:8px;height:8px;border-radius:50%;background:#888}
+.status.open i{background:#7fc84a;box-shadow:0 0 0 4px rgba(127,200,74,.2)}
+.script{font-family:var(--script);font-size:clamp(2.6rem,6vw,3.8rem);color:var(--tan);line-height:1;margin-top:1.6rem}
+.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.8rem,7.2vw,5.6rem);line-height:.98;letter-spacing:.01em;margin-top:.4rem;text-transform:uppercase}
+.hero p.sub{color:var(--cream-2);font-size:1.08rem;max-width:44ch;margin-top:1.3rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.facts{display:flex;gap:2.2rem;margin-top:2.4rem;flex-wrap:wrap}
+.facts div{font-size:.8rem;color:var(--mute);letter-spacing:.05em}
+.facts b{display:block;font-family:var(--disp);font-weight:400;font-size:2rem;color:var(--cream);line-height:1.1}
+
+/* secciones */
+section{padding:6rem 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:2.8rem;border-bottom:1px solid var(--line);padding-bottom:1.4rem}
+.eyebrow{font-family:var(--script);color:var(--tan);font-size:2rem;line-height:1}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(2.4rem,5.5vw,4.2rem);line-height:1;text-transform:uppercase;letter-spacing:.02em}
+.head p{color:var(--cream-2);max-width:46ch}
+
+/* favoritos */
+.favs{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-auto-rows:260px;gap:1rem}
+@media (max-width:900px){.favs{grid-template-columns:1fr 1fr;grid-auto-rows:220px}}
+@media (max-width:560px){.favs{grid-template-columns:1fr}}
+.fav{position:relative;overflow:hidden;border-radius:4px;isolation:isolate}
+.fav img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.fav:hover img{transform:scale(1.07)}
+.fav::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(14,13,12,.92) 0%,rgba(14,13,12,.2) 60%,transparent)}
+.fav .txt{position:absolute;left:1.2rem;right:1.2rem;bottom:1.1rem}
+.fav .kr{color:var(--tan);font-size:.9rem}
+.fav h3{font-family:var(--disp);font-weight:400;font-size:1.9rem;line-height:1.05;text-transform:uppercase}
+.fav .men{display:inline-block;margin-top:.4rem;font-size:.75rem;letter-spacing:.06em;background:rgba(212,165,126,.18);color:var(--tan);padding:.2rem .6rem;border-radius:999px}
+.fav.big{grid-row:span 2}
+.fav.big h3{font-size:2.8rem}
+@media (max-width:900px){.fav.big{grid-row:span 1;grid-column:span 2}}
+@media (max-width:560px){.fav.big{grid-column:auto}}
+
+/* carta */
+.menu-sec{background:var(--bg-2)}
+.note{display:flex;gap:.8rem;align-items:flex-start;background:var(--bg-3);border-left:3px solid var(--tan);padding:1rem 1.2rem;margin-bottom:1.8rem;color:var(--cream-2);font-size:.95rem}
+.note b{color:var(--cream)}
+.tools{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:2rem}
+.tabs{display:flex;gap:.3rem;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;background:transparent;border:1px solid var(--line);color:var(--cream-2);font-family:var(--sans);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:.6rem 1rem;cursor:pointer;border-radius:2px}
+.tab[aria-selected="true"]{background:var(--olive);border-color:var(--olive);color:#fff}
+.chipf{display:inline-flex;align-items:center;gap:.4rem;background:transparent;border:1px solid var(--line);color:var(--cream-2);font-family:var(--sans);font-size:.85rem;padding:.55rem .9rem;border-radius:999px;cursor:pointer}
+.chipf[aria-pressed="true"]{border-color:var(--spicy);color:var(--spicy)}
+.chipf.v[aria-pressed="true"]{border-color:var(--vegan);color:#9fd66b}
+.ico{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;font-size:.7rem;font-weight:700;color:#1a1512;flex:none}
+.ico.s{background:var(--spicy)}
+.ico.v{background:var(--vegan);color:#fff}
+.dishes{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+@media (max-width:800px){.dishes{grid-template-columns:1fr}}
+.dish{display:grid;grid-template-columns:150px 1fr auto;gap:1.1rem;align-items:center;background:var(--bg);border:1px solid var(--line);padding:.8rem;border-radius:4px;transition:border-color .3s}
+.dish:hover{border-color:rgba(212,165,126,.5)}
+.dish.noimg{grid-template-columns:1fr auto;padding:1rem 1.2rem}
+.dish img{width:150px;height:100px;object-fit:cover;border-radius:2px}
+@media (max-width:480px){.dish{grid-template-columns:96px 1fr auto}.dish img{width:96px;height:80px}}
+.dish .kr{color:var(--tan);font-size:.88rem}
+.dish h3{font-family:var(--sans);font-weight:400;font-size:1.12rem;line-height:1.2;color:var(--cream)}
+.dish p{color:var(--mute);font-size:.86rem;line-height:1.35;margin-top:.25rem}
+.dish .icons{display:flex;gap:.3rem;margin-top:.45rem}
+.price{background:var(--tag);color:#1a1512;font-weight:700;font-size:1rem;min-width:52px;text-align:center;padding:.45rem .4rem .7rem;clip-path:polygon(0 0,100% 0,100% 78%,50% 100%,0 78%);font-family:var(--sans)}
+.drinks{columns:2;column-gap:3rem}
+@media (max-width:800px){.drinks{columns:1}}
+.dgroup{break-inside:avoid;margin-bottom:2rem}
+.dgroup h3{font-family:var(--disp);font-weight:400;font-size:1.6rem;text-transform:uppercase;color:var(--tan);border-bottom:1px solid var(--line);padding-bottom:.4rem;margin-bottom:.4rem}
+.drow{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:baseline;padding:.45rem 0;border-bottom:1px dashed rgba(235,225,208,.08)}
+.drow .kr{color:var(--mute);font-size:.82rem;min-width:4.5rem}
+.drow small{color:var(--mute)}
+.drow .p{font-weight:700;color:var(--cream)}
+.empty{color:var(--mute);padding:1rem 0}
+
+/* ambiente */
+.amb{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:300px 300px;gap:1rem}
+.amb figure{position:relative;overflow:hidden;border-radius:4px}
+.amb img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.amb figure:hover img{transform:scale(1.05)}
+.amb figcaption{position:absolute;left:1rem;bottom:.8rem;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(20,19,18,.7);padding:.3rem .7rem}
+.amb .a1{grid-row:span 2}
+.amb .a4{grid-column:span 2}
+@media (max-width:800px){.amb{grid-template-columns:1fr 1fr;grid-template-rows:240px 240px 240px}.amb .a1{grid-row:span 1;grid-column:span 2}.amb .a4{grid-column:span 2}}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem;align-items:end}
+@media (max-width:800px){.story{grid-template-columns:1fr}}
+.story .big{font-family:var(--disp);font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.15}
+.story .big em{font-style:normal;color:var(--tan)}
+.story p{color:var(--cream-2)}
+
+/* reseñas */
+.revs{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media (max-width:900px){.revs{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.revs{grid-template-columns:1fr}}
+.rev{border-top:2px solid var(--olive-l);padding-top:1.2rem}
+.rev .st{color:var(--spicy);letter-spacing:.15em;font-size:.85rem}
+.rev q{display:block;font-family:var(--disp);font-size:1.5rem;line-height:1.2;margin-top:.6rem}
+.rev span{display:block;color:var(--mute);font-size:.8rem;margin-top:.8rem}
+.topics{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem}
+.topics span{border:1px solid var(--line);border-radius:999px;padding:.35rem .9rem;font-size:.85rem;color:var(--cream-2)}
+.topics b{color:var(--tan);font-weight:400}
+
+/* reserva */
+.res-sec{background:var(--olive);position:relative;overflow:hidden}
+.res-sec::before{content:"";position:absolute;right:-12%;bottom:-40%;width:60vw;height:60vw;border-radius:50%;background:var(--tan);opacity:.18}
+.res-sec .head{border-color:rgba(255,255,255,.2)}
+.res-sec .eyebrow{color:#f0d3b8}
+.res{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;background:var(--bg);padding:clamp(1.3rem,4vw,2.6rem);border-radius:4px}
+@media (max-width:860px){.res{grid-template-columns:1fr}}
+.field{margin-bottom:1.2rem}
+.field label,.field .lbl{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:.5rem}
+.seg{display:flex;flex-wrap:wrap;gap:.4rem}
+.seg button{background:transparent;border:1px solid var(--line);color:var(--cream);font-family:var(--sans);padding:.55rem .85rem;min-width:44px;cursor:pointer;border-radius:2px;font-size:.92rem}
+.seg button[aria-pressed="true"]{background:var(--tan);border-color:var(--tan);color:#1a1512}
+.seg button:disabled{opacity:.25;cursor:not-allowed}
+.days{display:flex;gap:.4rem;overflow-x:auto;padding-bottom:.3rem;scrollbar-width:thin}
+.days button{flex:none;width:64px;padding:.55rem 0;text-align:center;line-height:1.2}
+.days button small{display:block;font-size:.7rem;color:inherit;opacity:.75;text-transform:uppercase;letter-spacing:.05em}
+.days button b{display:block;font-size:1.25rem;font-weight:400}
+.field input,.field textarea{width:100%;background:var(--bg-2);border:1px solid var(--line);color:var(--cream);padding:.8rem;font-family:var(--sans);font-size:.95rem;border-radius:2px}
+.field textarea{min-height:70px;resize:vertical}
+.summary{background:var(--bg-3);padding:1.6rem;display:flex;flex-direction:column;gap:.9rem;border:1px solid var(--line);align-self:start;position:sticky;top:90px}
+.summary h3{font-family:var(--disp);font-weight:400;font-size:2rem;text-transform:uppercase}
+.summary dl{display:grid;grid-template-columns:auto 1fr;gap:.45rem 1rem}
+.summary dt{color:var(--mute)}
+.summary dd{text-align:right}
+.ok{display:none;color:#9fd66b;font-size:.92rem}
+.ok.on{display:block}
+.fine{font-size:.8rem;color:var(--mute)}
+
+/* visita */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+@media (max-width:860px){.visit{grid-template-columns:1fr}}
+.addr{font-family:var(--disp);font-size:clamp(2rem,4vw,3rem);line-height:1.05;text-transform:uppercase}
+.contact{list-style:none;margin-top:1.5rem;display:grid;gap:.6rem;color:var(--cream-2)}
+.hours{list-style:none}
+.hours li{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--line);color:var(--cream-2)}
+.hours li.today{color:var(--tan)}
+.hours li b{font-weight:400;color:var(--cream)}
+.hours li.today b{color:var(--tan)}
+
+footer{border-top:1px solid var(--line);padding:3rem 0}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;color:var(--mute);font-size:.85rem}
+footer .script{margin:0;font-size:2.4rem}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="demo">Propuesta de web para <b>Podonamu</b> · versión de muestra para revisar juntos</div>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="Podonamu"><b>podonamu</b><span>포도나무</span></a>
+    <div class="links"><a href="#favoritos">Favoritos</a><a href="#carta">Carta</a><a href="#casa">La casa</a><a href="#visita">Horario</a></div>
+    <a class="btn btn-tan" href="#reservar">Reservar</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="img/fachada.webp" alt="Entrada del restaurante Podonamu en Carrer de València" width="898" height="1197"></div>
+  <div class="wrap hero-inner">
+    <span class="status" id="status"><i></i><span>Carrer de València 164 · Eixample</span></span>
+    <p class="script">Po.do.na.mu</p>
+    <h1>Cocina coreana de verdad</h1>
+    <p class="sub">Jjamppong, kimchi jjigae, bibimbap en olla de piedra y pollo coreano en pleno Eixample. Todos los platos principales llevan banchan y arroz.</p>
+    <div class="actions"><a class="btn btn-tan" href="#reservar">Reservar mesa</a><a class="btn btn-line" href="#carta">Ver la carta</a></div>
+    <div class="facts"><div><b>4,5 ★</b>919 reseñas en Google</div><div><b>20–30 €</b>por persona</div><div><b>+40</b>platos coreanos</div></div>
+  </div>
+</header>
+
+<section id="favoritos">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">los favoritos</p><h2>Lo más pedido</h2></div><p>Los platos que más nombran vuestros clientes en las reseñas de Google.</p></div>
+    <div class="favs">
+      <article class="fav big reveal"><img src="img/jjamppong.webp" alt="Jjamppong, sopa de fideos picante con marisco" loading="lazy"><div class="txt"><span class="kr">해물짬뽕</span><h3>Jjamppong</h3><span class="men">Mencionado en 94 reseñas</span></div></article>
+      <article class="fav reveal"><img src="img/kimchi-jjigae.webp" alt="Kimchi jjigae" loading="lazy"><div class="txt"><span class="kr">김치찌개</span><h3>Kimchi jjigae</h3><span class="men">38 reseñas</span></div></article>
+      <article class="fav reveal"><img src="img/jeyuk.webp" alt="Cerdo salteado picante" loading="lazy"><div class="txt"><span class="kr">제육볶음</span><h3>Cerdo picante</h3><span class="men">30 reseñas</span></div></article>
+      <article class="fav reveal"><img src="img/yangnyeom-chicken.webp" alt="Pollo coreano con salsa de chili" loading="lazy"><div class="txt"><span class="kr">양념치킨</span><h3>Pollo coreano</h3><span class="men">12 reseñas</span></div></article>
+      <article class="fav reveal"><img src="img/japchae.webp" alt="Japchae" loading="lazy"><div class="txt"><span class="kr">잡채</span><h3>Japchae</h3><span class="men">9 reseñas</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="carta" class="menu-sec">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">la carta</p><h2>Nuestra carta</h2></div><p>Toda la carta con precios. Filtra por sección, por picante o por opción vegana.</p></div>
+    <div class="note reveal"><span style="font-size:1.4rem;line-height:1;color:var(--tan)">!</span><div><b>Banchan y arroz están incluidos en cada plato principal.</b><br><span class="kr">모든 메뉴에 반찬과 밥이 함께 제공됩니다.</span> Refill de banchan: 1 € por tipo.</div></div>
+    <div class="tools reveal">
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <button class="chipf" id="f-s" aria-pressed="false"><span class="ico s">🌶</span>Picante</button>
+      <button class="chipf v" id="f-v" aria-pressed="false"><span class="ico v">V</span>Opción vegana</button>
+    </div>
+    <div id="menu"></div>
+  </div>
+</section>
+
+<section id="casa">
+  <div class="wrap">
+    <div class="story reveal">
+      <p class="big"><span class="kr" style="color:var(--tan)">포도나무</span> quiere decir <em>“la vid”</em>. Una casa coreana con madera cálida, faroles de papel y sitio para quedarse.</p>
+      <p>Un comedor largo y luminoso en Carrer de València, con detalles tradicionales coreanos: ventanas de celosía, vasijas de barro y faroles de papel hanji. Para comer con calma o compartir platos entre todos.</p>
+    </div>
+    <div class="amb">
+      <figure class="a1 reveal"><img src="img/sala.webp" alt="Comedor de Podonamu" loading="lazy"><figcaption>El comedor</figcaption></figure>
+      <figure class="reveal"><img src="img/farol.webp" alt="Farol de papel coreano" loading="lazy"><figcaption>Detalles coreanos</figcaption></figure>
+      <figure class="reveal"><img src="img/fachada.webp" alt="Entrada de Podonamu" loading="lazy" style="object-position:50% 30%"><figcaption>València 164</figcaption></figure>
+      <figure class="a4 reveal"><img src="img/mesas.webp" alt="Mesas del restaurante" loading="lazy" style="object-position:50% 70%"><figcaption>Mesas para compartir</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">opiniones</p><h2>4,5 en Google</h2></div><p>919 reseñas de clientes, de aquí y de Corea.</p></div>
+    <div class="revs">
+      <figure class="rev reveal"><div class="st">★★★★★</div><q>Una joya de comida tradicional coreana en Barcelona.</q><span>Reseña de Google</span></figure>
+      <figure class="rev reveal"><div class="st">★★★★★</div><q>Las porciones son generosas y la calidad es un 10.</q><span>Reseña de Google</span></figure>
+      <figure class="rev reveal"><div class="st">★★★★★</div><q>He vivido en Seúl: comer aquí es como comer en Corea.</q><span>Reseña de Google</span></figure>
+      <figure class="rev reveal"><div class="st">★★★★★</div><q>Uno de los mejores coreanos de Barcelona.</q><span>Reseña de Google</span></figure>
+    </div>
+    <div class="topics reveal"><span>jjamppong <b>94</b></span><span>kimchi jjigae <b>38</b></span><span>cerdo salteado picante <b>30</b></span><span>marisco <b>23</b></span><span>pollo coreano <b>12</b></span><span>japchae <b>9</b></span><span>cerdo agridulce <b>8</b></span><span>osam bulgogi <b>5</b></span></div>
+  </div>
+</section>
+
+<section id="reservar" class="res-sec">
+  <div class="wrap">
+    <div class="head reveal"><div><p class="eyebrow">reservas</p><h2>Reserva tu mesa</h2></div><p style="color:#eadfcb">Elige día, hora y cuántos sois. Te confirmamos la reserva.</p></div>
+    <form class="res reveal" id="form" novalidate>
+      <div>
+        <div class="field"><span class="lbl">¿Cuántos sois?</span><div class="seg" id="people"></div><p class="fine" id="group" style="display:none;margin-top:.5rem">Para grupos de más de 8, llámanos al 931 05 43 89.</p></div>
+        <div class="field"><span class="lbl">Día</span><div class="seg days" id="days"></div></div>
+        <div class="field"><span class="lbl">Turno</span><div class="seg" id="shift"><button type="button" data-s="c" aria-pressed="true">Comida</button><button type="button" data-s="n" aria-pressed="false">Cena</button></div></div>
+        <div class="field"><span class="lbl">Hora</span><div class="seg" id="times"></div></div>
+        <div class="field"><label for="name">Nombre</label><input id="name" autocomplete="name" placeholder="Tu nombre"></div>
+        <div class="field"><label for="notes">Comentarios (opcional)</label><textarea id="notes" placeholder="Alergias, trona, celebración…"></textarea></div>
+      </div>
+      <aside class="summary">
+        <h3>Tu reserva</h3>
+        <dl><dt>Personas</dt><dd id="s-p">2</dd><dt>Día</dt><dd id="s-d">—</dd><dt>Hora</dt><dd id="s-t">—</dd><dt>Nombre</dt><dd id="s-n">—</dd></dl>
+        <button class="btn btn-tan" type="submit">Solicitar reserva</button>
+        <a class="btn btn-line" id="wa" href="#" style="display:none">Enviar por WhatsApp</a>
+        <p class="ok" id="ok">✓ Lista. Envíala y te confirmamos la mesa.</p>
+        <p class="fine">O llámanos al <b style="color:var(--cream)">931 05 43 89</b>.</p>
+      </aside>
+    </form>
+  </div>
+</section>
+
+<section id="visita">
+  <div class="wrap visit">
+    <div class="reveal">
+      <p class="eyebrow">visítanos</p>
+      <p class="addr">Carrer de València, 164<br><span style="color:var(--tan)">Eixample, Barcelona</span></p>
+      <ul class="contact"><li>Teléfono: <b style="color:var(--cream)">931 05 43 89</b></li><li>Para comer allí o para llevar</li><li>20–30 € por persona</li></ul>
+      <p style="margin-top:1.6rem"><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Podonamu+Carrer+de+Valencia+164+Barcelona">Cómo llegar</a></p>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow" style="margin-bottom:1rem">horario</p>
+      <ul class="hours" id="hours"></ul>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap foot"><span class="script">Po.do.na.mu</span><span>포도나무 · Carrer de València 164, 08011 Barcelona</span><span>Web de muestra preparada por Marcos</span></div></footer>
+
+<script>
+(function(){
+  function safe(f){try{f()}catch(e){console.warn(e)}}
+  // [coreano, nombre, descripción, precio, img, picante, vegano]
+  var M=[
+    {id:'ent',t:'Entrantes',items:[
+      ['양념치킨','Yangnyeom chicken (8 uds)','Pollo frito con salsa de chili dulce','14','yangnyeom-chicken',1,0],
+      ['허니 간장치킨','Honey chicken (8 uds)','Pollo frito con salsa de soja y miel','14','',0,0],
+      ['잡채','Japchae','Fideo de boniato con verduras variadas','13','japchae',0,1],
+      ['해물전','Haemul-jeon','Tortilla de marisco y verdura','13','haemul-pajeon',0,0],
+      ['떡볶이','Tteokbokki','Pasta de arroz con salsa picante','13,5','',1,0],
+      ['불고기 떡볶이','Bulgogi tteokbokki','Pasta de arroz con ternera en salsa de soja','14,5','',0,0],
+      ['탕수육','Tangsuyuk','Lomo rebozado con salsa agridulce','14,5','tangsuyuk',0,0],
+      ['소고기 김밥','Kimbap','Arroz, alga, ternera, zanahoria, huevo, espinacas y nabo','11,5','kimbap',0,1],
+      ['만두','Mandu (8 uds)','Empanadillas de pollo y verduras','10,5','',0,0],
+      ['두부김치','Tofu kimchi','Tofu con kimchi y cerdo salteado','16','tofu-kimchi',1,0],
+      ['밥','Bap','Bol de arroz blanco','2','',0,0]
+    ]},
+    {id:'pri',t:'Principales',items:[
+      ['돌솥 비빔밥','Dolsot bibimbap','Arroz con verduras variadas (carne o tofu) en olla de piedra','15','bibimbap',0,0],
+      ['김치 볶음밥','Kimchi bokkeumbap','Arroz frito de kimchi, verdura, gamba y huevo','14','kimchi-bokkeumbap',1,1],
+      ['소불고기','Bulgogi','Ternera salteada con salsa de soja y verduras','15,5','',0,0],
+      ['제육볶음','Jeyuk bokkeum','Cerdo salteado con salsa picante, con arroz','14,5','jeyuk',1,0],
+      ['돼지불고기 겨자채','Bulgogi gyeojache','Cerdo y brote de soja con salsa de mostaza, con arroz','14,5','',0,0],
+      ['돈까스','Donkas','Lomo de cerdo rebozado con salsa casera','14,5','donkas',0,0],
+      ['오징어 볶음','Ojingeo bokkeum','Calamares salteados con salsa picante','15','ojingeo',1,0],
+      ['오삼 불고기','Osam bulgogi','Calamares y cerdo salteados con salsa picante','15','',1,0]
+    ]},
+    {id:'sop',t:'Sopas y guisos',items:[
+      ['해물짬뽕','Jjamppong','Sopa de fideos picante con marisco, verduras variadas y cerdo','18','jjamppong',1,0],
+      ['김치찌개','Kimchi jjigae','Estofado de kimchi con cerdo y tofu','15,5','kimchi-jjigae',1,0],
+      ['순두부 찌개','Sundubu jjigae','Estofado de tofu blando con cerdo y marisco','14,5','sundubu',1,0],
+      ['차돌 된장찌개','Doenjang jjigae','Estofado de ternera y pasta de soja','14,5','',0,0],
+      ['소고기버섯 전골','Bulgogi jeongol','Estofado de ternera, setas y verduras','17','',0,0],
+      ['짜장면','Jajangmyeon','Fideos con salsa de soja negra, carne y verdura en dados','15','jajangmyeon',0,0],
+      ['부대찌개','Budae jjigae','Estofado picante de kimchi con jamón, salchichas, panceta, alubias y tofu (ramen no incluido)','32','',1,0],
+      ['라면','Ramen','Sopa de fideos, con o sin picante','11','ramen',1,0]
+    ]},
+    {id:'tem',t:'De temporada',items:[
+      ['콩국수','Kong-guksu','Fideos fríos en sopa de soja. Plato de verano','15','kong-guksu',0,0],
+      ['초계면','Chogye-myeon','Sopa fría de fideos con pollo, pepino y nabo. Plato de verano','15','',0,0],
+      ['어묵탕','Eomuk-tang','Sopa de pastel de pescado. Plato de invierno','16','eomuk-tang',0,0]
+    ]},
+    {id:'pos',t:'Postres',items:[
+      ['호떡','Hotteok','Tortita coreana con helado','5,5','hotteok',0,0],
+      ['붕어빵','Bungeoppang','Pastelito en forma de pez (judías rojas o té verde)','5,5','bungeoppang',0,0],
+      ['모찌','Mochi','Té verde o yuzu','5,5','',0,0],
+      ['아이스크림','Helado','Pistacho o mango','4','',0,0],
+      ['약과','Yakgwa','Galleta tradicional coreana de miel y harina','6','yakgwa',0,0]
+    ]},
+    {id:'beb',t:'Bebidas',drinks:[
+      {t:'Bebidas',rows:[['물','Agua 500 ml / 1,5 l','2 / 3,5'],['탄산수','Agua con gas','3'],['탄산음료','Refrescos','3','Coca-Cola, Fanta, Nestea, Sprite'],['맥주','Cerveza Estrella / sin alcohol','3'],['','Clara','3,5'],['','Turia','4']]},
+      {t:'Bebidas coreanas',rows:[['소주','Soju','15','Original o sabores de fruta'],['맥주','Cerveza coreana Cass','4'],['하이볼','Highball','7','Lima o yuja'],['막걸리','Makgeolli','15','Vino de arroz tradicional'],['복분자','Bokbunja','16 / 3','Vino de frambuesa, botella / copa'],['갈아만든 배','Zumo de pera coreana','3,5'],['봉봉','Bebida de uva coreana','3,5'],['코코팜','Bebida de coco','3,5'],['식혜','Sikhye','3,5','Bebida dulce de arroz'],['녹차','Té verde','2,5'],['둥굴레차','Té coreano','3']]},
+      {t:'Cafés',rows:[['에스프레소','Solo','2,5'],['아메리카노','Americano','2,5'],['꼬르따도','Cortado','2,5'],['카페라떼','Café con leche','2,5'],['아이스커피','Con hielo','3'],['한국커피','Café coreano','2,5']]}
+    ]}
+  ];
+  var cur='all',fs=false,fv=false;
+  safe(function(){
+    var tabs=document.getElementById('tabs'),menu=document.getElementById('menu');
+    [{id:'all',t:'Todo'}].concat(M).forEach(function(g){var b=document.createElement('button');b.className='tab';b.textContent=g.t;b.setAttribute('role','tab');b.setAttribute('aria-selected',g.id==='all');
+      b.addEventListener('click',function(){cur=g.id;[].forEach.call(tabs.children,function(x){x.setAttribute('aria-selected',x===b)});draw()});tabs.appendChild(b)});
+    function dish(it){
+      var icons=(it[5]?'<span class="ico s" title="Picante">🌶</span>':'')+(it[6]?'<span class="ico v" title="Opción vegana disponible">V</span>':'');
+      return '<article class="dish'+(it[4]?'':' noimg')+'">'+(it[4]?'<img src="img/'+it[4]+'.webp" alt="'+it[1]+'" loading="lazy" width="150" height="100">':'')+
+        '<div><span class="kr">'+it[0]+'</span><h3>'+it[1]+'</h3><p>'+it[2]+'</p>'+(icons?'<div class="icons">'+icons+'</div>':'')+'</div><div class="price">'+it[3]+'</div></article>';
+    }
+    function draw(){
+      var html='',n=0;
+      M.forEach(function(g){
+        if(cur!=='all'&&cur!==g.id)return;
+        if(g.drinks){if(fs||fv)return;n++;html+='<h3 class="sub-h" style="font-family:var(--disp);font-weight:400;font-size:2rem;text-transform:uppercase;margin:2.5rem 0 1rem;color:var(--cream)">'+g.t+'</h3><div class="drinks">'+g.drinks.map(function(d){return '<div class="dgroup"><h3>'+d.t+'</h3>'+d.rows.map(function(r){return '<div class="drow"><span class="kr">'+r[0]+'</span><span>'+r[1]+(r[3]?' <small>· '+r[3]+'</small>':'')+'</span><span class="p">'+r[2]+'</span></div>'}).join('')+'</div>'}).join('')+'</div>';return}
+        var rows=g.items.filter(function(it){return (!fs||it[5])&&(!fv||it[6])});
+        if(!rows.length)return;n+=rows.length;
+        html+='<h3 style="font-family:var(--disp);font-weight:400;font-size:2rem;text-transform:uppercase;margin:2.5rem 0 1rem;color:var(--cream)">'+g.t+'</h3><div class="dishes">'+rows.map(dish).join('')+'</div>';
+      });
+      menu.innerHTML=n?html:'<p class="empty">No hay platos con ese filtro en esta sección.</p>';
+      if(menu.firstChild&&menu.firstChild.style)menu.firstChild.style.marginTop='0';
+    }
+    function tog(id,set){var b=document.getElementById(id);b.addEventListener('click',function(){set();b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');draw()})}
+    tog('f-s',function(){fs=!fs});tog('f-v',function(){fv=!fv});
+    draw();
+  });
+
+  safe(function(){
+    var els=[].slice.call(document.querySelectorAll('.reveal'));
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.05});
+    els.forEach(function(e){io.observe(e)});setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},2500);
+  });
+
+  // horario: 0 = domingo. [comida, cena]
+  var H=[null,null,[[780,960],[1170,1350]],[[780,960],[1170,1350]],[[780,960],[1170,1350]],[[780,960],[1170,1380]],[[780,960],[1170,1380]]];
+  var DAYS=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],SH=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+  function fmt(m){var h=Math.floor(m/60),mi=m%60;return h+':'+(mi<10?'0':'')+mi}
+  function madrid(){var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});return{d:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday),m:parseInt(o.hour,10)%24*60+parseInt(o.minute,10)}}
+  var now=madrid();
+  safe(function(){
+    var ul=document.getElementById('hours');
+    [1,2,3,4,5,6,0].forEach(function(i){var li=document.createElement('li');if(i===now.d)li.className='today';var h=H[i];li.innerHTML='<b>'+DAYS[i]+'</b><span>'+(h?fmt(h[0][0])+'–'+fmt(h[0][1])+' · '+fmt(h[1][0])+'–'+fmt(h[1][1]):'Cerrado')+'</span>';ul.appendChild(li)});
+    var t=H[now.d],msg,open=false;
+    if(t){for(var k=0;k<2;k++){if(now.m>=t[k][0]&&now.m<t[k][1]){open=true;msg='Abierto ahora · hasta las '+fmt(t[k][1])}}
+      if(!open){if(now.m<t[0][0])msg='Hoy abrimos a las '+fmt(t[0][0]);else if(now.m<t[1][0])msg='Cerrado · volvemos a las '+fmt(t[1][0])}}
+    if(!msg){var dd=now.d,c=0;do{dd=(dd+1)%7;c++}while(!H[dd]&&c<7);msg='Cerrado · abrimos '+(c===1?'mañana':'el '+DAYS[dd].toLowerCase())+' a las '+fmt(H[dd][0][0])}
+    var s=document.getElementById('status');s.classList.toggle('open',open);s.querySelector('span').textContent=msg;
+  });
+
+  // reservas
+  safe(function(){
+    var st={p:2,day:null,date:null,shift:'c',time:null};
+    var pw=document.getElementById('people'),dw=document.getElementById('days'),tw=document.getElementById('times'),nm=document.getElementById('name'),wa=document.getElementById('wa'),ok=document.getElementById('ok');
+    [1,2,3,4,5,6,7,8,'9+'].forEach(function(n){var b=document.createElement('button');b.type='button';b.textContent=n;b.setAttribute('aria-pressed',n===2);
+      b.addEventListener('click',function(){st.p=n;[].forEach.call(pw.children,function(x){x.setAttribute('aria-pressed',x===b)});document.getElementById('group').style.display=n==='9+'?'block':'none';sync()});pw.appendChild(b)});
+    var base=new Date(),first=null;
+    for(var k=0,c=0;k<30&&c<14;k++){
+      var d=new Date(base.getTime()+k*864e5),wd=(now.d+k)%7;if(!H[wd])continue;
+      var t=H[wd];if(k===0&&now.m>t[1][1]-60)continue;c++;
+      (function(d,wd,k){var b=document.createElement('button');b.type='button';b.innerHTML='<small>'+(k===0?'Hoy':k===1?'Mañana':SH[wd])+'</small><b>'+d.getDate()+'</b><small>'+d.toLocaleDateString('es-ES',{month:'short'}).replace('.','')+'</small>';
+        b.addEventListener('click',function(){pick(b,wd,d,k)});dw.appendChild(b);if(!first)first=function(){pick(b,wd,d,k)}})(d,wd,k);
+    }
+    function pick(b,wd,d,k){st.day=wd;st.k=k;st.date=(k===0?'hoy ':k===1?'mañana ':DAYS[wd].toLowerCase()+' ')+d.getDate()+' de '+d.toLocaleDateString('es-ES',{month:'long'});[].forEach.call(dw.children,function(x){x.setAttribute('aria-pressed',x===b)});times()}
+    [].forEach.call(document.querySelectorAll('#shift button'),function(b){b.addEventListener('click',function(){st.shift=b.getAttribute('data-s');[].forEach.call(document.querySelectorAll('#shift button'),function(x){x.setAttribute('aria-pressed',x===b)});times()})});
+    function times(){
+      tw.innerHTML='';st.time=null;var r=H[st.day][st.shift==='c'?0:1];
+      for(var m=r[0];m<=r[1]-60;m+=30){(function(m){var b=document.createElement('button');b.type='button';b.textContent=fmt(m);
+        if(st.k===0&&m<now.m+30)b.disabled=true;
+        b.addEventListener('click',function(){st.time=fmt(m);[].forEach.call(tw.children,function(x){x.setAttribute('aria-pressed',x===b)});sync()});tw.appendChild(b)})(m)}
+      if(![].some.call(tw.children,function(b){return !b.disabled})&&st.shift==='c'&&st.k===0){st.shift='n';[].forEach.call(document.querySelectorAll('#shift button'),function(x){x.setAttribute('aria-pressed',x.getAttribute('data-s')==='n')});return times()}
+      if(![].some.call(tw.children,function(b){return !b.disabled})){var p=document.createElement('p');p.className='fine';p.textContent='Hoy ya no quedan horas en este turno. Prueba el otro turno u otro día.';tw.appendChild(p)}
+      sync();
+    }
+    function sync(){document.getElementById('s-p').textContent=st.p;document.getElementById('s-d').textContent=st.date||'—';document.getElementById('s-t').textContent=st.time||'—';document.getElementById('s-n').textContent=nm.value.trim()||'—';wa.style.display='none';ok.classList.remove('on')}
+    nm.addEventListener('input',sync);
+    document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();
+      if(st.p==='9+'){document.getElementById('group').style.display='block';return}
+      if(!st.time){tw.scrollIntoView({behavior:'smooth',block:'center'});return}
+      if(!nm.value.trim()){nm.focus();nm.style.borderColor='var(--tan)';return}
+      var notes=document.getElementById('notes').value.trim();
+      var txt='¡Hola Podonamu! Quería reservar mesa para '+st.p+' personas, '+st.date+' a las '+st.time+'. A nombre de '+nm.value.trim()+'.'+(notes?'\nComentarios: '+notes:'');
+      wa.href='https://wa.me/34931054389?text='+encodeURIComponent(txt);wa.style.display='inline-flex';ok.classList.add('on')});
+    if(first)first();
+  });
+})();
+</script>
+</body>
+</html>
